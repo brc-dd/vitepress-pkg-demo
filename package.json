@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "vitepress-pkg-demo",
+  "bin": "index.js",
+  "scripts": {
+    "dev": "vitepress",
+    "build": "vitepress build && pkg .",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "get-port": "^5.1.1",
+    "open": "^8.4.2",
+    "pkg": "^5.8.1",
+    "serve-handler": "^6.1.5",
+    "vitepress": "1.0.0-alpha.61"
+  },
+  "pkg": {
+    "assets": ".vitepress/dist/**/*",
+    "targets": [
+      "node18-macos-arm64"
+    ],
+    "outputPath": "dist"
+  }
+}
